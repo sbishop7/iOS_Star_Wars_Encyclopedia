@@ -38,33 +38,30 @@ class PeopleViewController: UITableViewController {
                 // try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     DispatchQueue.main.async {
-                    if let results = jsonResult["results"] {
-                        //                        print (results)
-                        // coercing the results object as an NSArray and then storing that in resultsArray
-                        let resultsArray = results as! NSArray
-                        // now we can run NSArray methods like count and firstObject
-                        //
-//                        DispatchQueue.main.async {
-                        for person in resultsArray {
-                            let personDict = person as! NSDictionary
-                            print(personDict["name"]!)
-                            self.people.append(personDict["name"]! as! String)
+                        if (jsonResult["next"] as? NSNull) != nil {
+                            print ("it's null")
                         }
-//                            self.tableView.reloadData()
-//                        }
-                    }
-                    self.tableView.reloadData()
-                    if (jsonResult["next"] as? NSNull) != nil {
-                        print ("it's null")
-                    }
-                    if let newURL = jsonResult["next"] as? String {
-//                        DispatchQueue.main.async {
-                        self.url = URL(string: newURL )
-                        print (self.url!)
+                        if let newURL = jsonResult["next"] as? String {
+                            self.url = URL(string: newURL )
+                            print (self.url!)
+                            
+                            self.getApiData(url: URL(string: newURL )!)
+                        }
+
+                        if let results = jsonResult["results"] {
                         
-                        self.getApiData(url: URL(string: newURL )!)
-//                        }
-                    }
+                            // coercing the results object as an NSArray and then storing that in resultsArray
+                            let resultsArray = results as! NSArray
+                            // now we can run NSArray methods like count and firstObject
+                            //
+                            for person in resultsArray {
+                                let personDict = person as! NSDictionary
+                                print(personDict["name"]!)
+                                self.people.append(personDict["name"]! as! String)
+                            }
+                        }
+                        
+                    self.tableView.reloadData()
                     }
                     
                 }
@@ -77,8 +74,6 @@ class PeopleViewController: UITableViewController {
         // to run the completion handler. This is async!
         
         task.resume()
-        print ("next URL is...")
-        print (self.url!)
     }
 
     
