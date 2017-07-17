@@ -13,6 +13,7 @@
 		5430F7B51F1D0E3D00CC37CC /* Star_Wars_Encyclopedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5430F7B31F1D0E3D00CC37CC /* Star_Wars_Encyclopedia.xcdatamodeld */; };
 		5430F7B71F1D0E3D00CC37CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5430F7B61F1D0E3D00CC37CC /* Assets.xcassets */; };
 		5430F7BA1F1D0E3D00CC37CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5430F7B81F1D0E3D00CC37CC /* LaunchScreen.storyboard */; };
+		5430F7C21F1D65E300CC37CC /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F7C11F1D65E300CC37CC /* FilmsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5430F7B61F1D0E3D00CC37CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5430F7B91F1D0E3D00CC37CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5430F7BB1F1D0E3D00CC37CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5430F7C11F1D65E300CC37CC /* FilmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				5430F7AC1F1D0E3D00CC37CC /* AppDelegate.swift */,
 				5430F7AE1F1D0E3D00CC37CC /* PeopleViewController.swift */,
+				5430F7C11F1D65E300CC37CC /* FilmsViewController.swift */,
 				5430F7B01F1D0E3D00CC37CC /* Main.storyboard */,
 				5430F7B61F1D0E3D00CC37CC /* Assets.xcassets */,
 				5430F7B81F1D0E3D00CC37CC /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				5430F7AF1F1D0E3D00CC37CC /* PeopleViewController.swift in Sources */,
 				5430F7AD1F1D0E3D00CC37CC /* AppDelegate.swift in Sources */,
+				5430F7C21F1D65E300CC37CC /* FilmsViewController.swift in Sources */,
 				5430F7B51F1D0E3D00CC37CC /* Star_Wars_Encyclopedia.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
