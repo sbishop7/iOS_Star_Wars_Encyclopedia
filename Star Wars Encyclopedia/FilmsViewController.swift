@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class FilmsViewController: UITableViewController {
 
-    var films = [String]()
+    var films = [NSDictionary]()
     
     
     override func viewDidLoad() {
@@ -28,8 +28,8 @@ class FilmsViewController: UITableViewController {
                             //
                             for film in resultsArray {
                                 let filmDict = film as! NSDictionary
-                                print(filmDict["title"]!)
-                                self.films.append(filmDict["title"]! as! String)
+//                                print(filmDict["title"]!)
+                                self.films.append(filmDict)
                             }
                         }
                         DispatchQueue.main.async {
@@ -60,11 +60,20 @@ class FilmsViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create a generic cell
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "filmCell", for: indexPath)
         // set the default cell label to the corresponding element in the people array
-        cell.textLabel?.text = films[indexPath.row]
+        cell.textLabel?.text = films[indexPath.row]["title"] as? String
         // return the cell so that it can be rendered
         return cell
+    }
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let film = films[indexPath.row]
+        performSegue(withIdentifier: "filmSegue", sender: film)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let film = sender as? NSDictionary
+        let destination = segue.destination as! FilmDetailsViewController
+        destination.film = film
     }
 
     

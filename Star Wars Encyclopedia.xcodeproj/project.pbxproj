@@ -16,6 +16,7 @@
 		5430F7C21F1D65E300CC37CC /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F7C11F1D65E300CC37CC /* FilmsViewController.swift */; };
 		5430F7C41F1D6C4300CC37CC /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F7C31F1D6C4300CC37CC /* StarWarsModel.swift */; };
 		5430F7C61F1D7CDE00CC37CC /* PeopleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F7C51F1D7CDE00CC37CC /* PeopleDetailsViewController.swift */; };
+		547DE6741F1E899B00E502E1 /* FilmDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547DE6731F1E899B00E502E1 /* FilmDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5430F7C11F1D65E300CC37CC /* FilmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 		5430F7C31F1D6C4300CC37CC /* StarWarsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 		5430F7C51F1D7CDE00CC37CC /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
+		547DE6731F1E899B00E502E1 /* FilmDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				5430F7AE1F1D0E3D00CC37CC /* PeopleViewController.swift */,
 				5430F7C51F1D7CDE00CC37CC /* PeopleDetailsViewController.swift */,
 				5430F7C11F1D65E300CC37CC /* FilmsViewController.swift */,
+				547DE6731F1E899B00E502E1 /* FilmDetailsViewController.swift */,
 				5430F7B01F1D0E3D00CC37CC /* Main.storyboard */,
 				5430F7B61F1D0E3D00CC37CC /* Assets.xcassets */,
 				5430F7B81F1D0E3D00CC37CC /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				5430F7C61F1D7CDE00CC37CC /* PeopleDetailsViewController.swift in Sources */,
 				5430F7AF1F1D0E3D00CC37CC /* PeopleViewController.swift in Sources */,
+				547DE6741F1E899B00E502E1 /* FilmDetailsViewController.swift in Sources */,
 				5430F7AD1F1D0E3D00CC37CC /* AppDelegate.swift in Sources */,
 				5430F7C41F1D6C4300CC37CC /* StarWarsModel.swift in Sources */,
 				5430F7C21F1D65E300CC37CC /* FilmsViewController.swift in Sources */,
@@ -320,6 +324,7 @@
 				5430F7C01F1D0E3D00CC37CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
