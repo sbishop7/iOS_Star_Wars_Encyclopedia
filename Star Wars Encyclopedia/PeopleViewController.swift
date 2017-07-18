@@ -80,4 +80,12 @@ class PeopleViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         performSegue(withIdentifier: "showPeopleDetailsSegue", sender: indexPath)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PeopleDetailsViewController
+        
+        let indexPath = sender as! NSIndexPath
+        destination.name = people[indexPath.row]
+        
+    }
 }

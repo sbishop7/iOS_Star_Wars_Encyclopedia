@@ -101,6 +101,9 @@
                             <constraint firstItem="UQQ-s3-3Q5" firstAttribute="leading" secondItem="1N4-jm-Bx2" secondAttribute="leadingMargin" id="qTu-G4-WXc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Ylx-bq-B12" id="T3v-cA-C6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeX-Ak-otq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
