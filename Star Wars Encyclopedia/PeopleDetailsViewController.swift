@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 class PeopleDetailsViewController: UIViewController {
 
-    var name: String?
+    var person: NSDictionary?
     
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name
+        nameLabel.text = person?["name"] as? String
     }
     
     override func didReceiveMemoryWarning() {

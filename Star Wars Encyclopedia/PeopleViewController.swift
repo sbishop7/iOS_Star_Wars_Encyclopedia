@@ -10,9 +10,12 @@ import UIKit
 class PeopleViewController: UITableViewController {
     // Hardcoded data for now
 //    var people = ["Luke Skywalker", "Leia Organa", "Han Solo", "C-3PO", "R2-D2"]
-    var people = [String]()
+    var people = [NSDictionary]()
     var url = URL(string: "http://swapi.co/api/people/")
     
+    @IBAction func unwindToPeople(_ segue: UIStoryboardSegue) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +44,8 @@ class PeopleViewController: UITableViewController {
                         for person in resultsArray {
                             let personDict = person as! NSDictionary
                             print(personDict["name"]!)
-                            self.people.append(personDict["name"]! as! String)
+//                            self.people.append(personDict["name"]! as! String)
+                            self.people.append(personDict)
                         }
                     }
                     DispatchQueue.main.async {
@@ -73,19 +77,21 @@ class PeopleViewController: UITableViewController {
         // Create a generic cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         // set the default cell label to the corresponding element in the people array
-        cell.textLabel?.text = people[indexPath.row]
+        cell.textLabel?.text = people[indexPath.row]["name"] as? String
         // return the cell so that it can be rendered
         return cell
     }
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPeopleDetailsSegue", sender: indexPath)
+        let person = people[indexPath.row]
+        performSegue(withIdentifier: "showPeopleDetailsSegue", sender: person)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let person = sender as? NSDictionary
+        
         let destination = segue.destination as! PeopleDetailsViewController
         
-        let indexPath = sender as! NSIndexPath
-        destination.name = people[indexPath.row]
+        destination.person = person
         
     }
 }
