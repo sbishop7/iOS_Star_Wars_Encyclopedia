@@ -235,26 +235,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp9-7M-6bn">
+                                <rect key="frame" x="16" y="188" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Jp9-7M-6bn" firstAttribute="top" secondItem="ELS-fV-vaw" secondAttribute="bottom" constant="8" id="1Lj-Pp-UI2"/>
                             <constraint firstItem="i4c-oM-xtL" firstAttribute="top" secondItem="GdH-HL-1m5" secondAttribute="bottom" constant="8" id="4Wa-Q7-aNv"/>
                             <constraint firstItem="i4c-oM-xtL" firstAttribute="trailing" secondItem="AWd-Nq-x9i" secondAttribute="trailingMargin" id="9EO-Js-mUZ"/>
                             <constraint firstItem="KQU-53-Qxh" firstAttribute="top" secondItem="i4c-oM-xtL" secondAttribute="bottom" constant="8" id="Aap-3s-92I"/>
+                            <constraint firstItem="Jp9-7M-6bn" firstAttribute="leading" secondItem="AWd-Nq-x9i" secondAttribute="leadingMargin" id="EOs-z4-3ET"/>
                             <constraint firstItem="fw8-kE-JhP" firstAttribute="leading" secondItem="AWd-Nq-x9i" secondAttribute="leadingMargin" id="GTU-C3-cCL"/>
                             <constraint firstItem="9x9-jh-OZO" firstAttribute="leading" secondItem="KQU-53-Qxh" secondAttribute="trailing" constant="8" id="MY7-RI-XJP"/>
                             <constraint firstItem="ELS-fV-vaw" firstAttribute="leading" secondItem="fw8-kE-JhP" secondAttribute="trailing" constant="8" id="PN3-Zp-dWh"/>
                             <constraint firstItem="ELS-fV-vaw" firstAttribute="top" secondItem="9x9-jh-OZO" secondAttribute="bottom" constant="8" id="ZQK-Ka-0Jc"/>
+                            <constraint firstItem="dBc-et-V8a" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Jp9-7M-6bn" secondAttribute="bottom" id="aeJ-v3-xZX"/>
                             <constraint firstItem="9x9-jh-OZO" firstAttribute="top" secondItem="i4c-oM-xtL" secondAttribute="bottom" constant="8" id="gwc-WW-IzS"/>
                             <constraint firstItem="ELS-fV-vaw" firstAttribute="trailing" secondItem="AWd-Nq-x9i" secondAttribute="trailingMargin" id="huA-3I-lIk"/>
                             <constraint firstItem="9x9-jh-OZO" firstAttribute="trailing" secondItem="AWd-Nq-x9i" secondAttribute="trailingMargin" id="jqR-AN-izE"/>
                             <constraint firstItem="i4c-oM-xtL" firstAttribute="leading" secondItem="AWd-Nq-x9i" secondAttribute="leadingMargin" id="poe-ka-MAs"/>
                             <constraint firstItem="fw8-kE-JhP" firstAttribute="top" secondItem="KQU-53-Qxh" secondAttribute="bottom" constant="8" id="qaQ-8B-BdK"/>
                             <constraint firstItem="KQU-53-Qxh" firstAttribute="leading" secondItem="AWd-Nq-x9i" secondAttribute="leadingMargin" id="sOO-yV-AdX"/>
+                            <constraint firstItem="Jp9-7M-6bn" firstAttribute="trailing" secondItem="AWd-Nq-x9i" secondAttribute="trailingMargin" id="x51-Yh-geK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="directorLabel" destination="ELS-fV-vaw" id="0fs-mA-HWO"/>
+                        <outlet property="openingCrawlLabel" destination="Jp9-7M-6bn" id="zbG-El-VJd"/>
                         <outlet property="releaseDateLabel" destination="9x9-jh-OZO" id="16q-MO-LTM"/>
                         <outlet property="titleLabel" destination="i4c-oM-xtL" id="nRT-DO-Fhd"/>
                     </connections>
